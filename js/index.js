@@ -131,12 +131,24 @@ navColor.forEach((e) => {
 
 headButton.addEventListener('click', function () {
   changeImage();
+  swapText();
 });
 
 function changeImage() {
   headImg.setAttribute('src', siteContent['cta']['img-swap']);
   headImg.classList.add('animate');
+  headImg.classList.toggle('animate-stop');
   headImg.style.boxShadow = '0px 0px 5px #040404'
+
+}
+
+function swapText() {
+  headButton.classList.toggle('green-button');
+  if (headButton.innerHTML === 'Get Started') {
+    headButton.innerHTML = 'Stop Spinning!';
+  } else {
+    headButton.innerHTML = 'Get Started';
+  }
 }
 
 headImg.style.borderRadius = '50%';

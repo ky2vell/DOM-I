@@ -301,9 +301,16 @@ footer {
 .animate {
     animation: rotating 2s linear infinite;
 }
-.animate:hover {
+.animate-stop {
     animation-play-state: paused;
     cursor: pointer;
+}
+.cta .cta-text .green-button {
+    background: #74bb53;
+    color: white;
+}
+.cta .cta-text .green-button:hover {
+    background: #74bb53;
 }
 
 @keyframes rotating {
