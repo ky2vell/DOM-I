@@ -43,15 +43,14 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // Nav
 
-let navLinks = document.querySelectorAll('nav a');
-navLinks.forEach((e) => {
-  e.textContent = siteContent['nav']['nav-item-2'];
-});
+let navLinks = Array.from(document.querySelectorAll('nav a'));
+let navContent = Object.values(siteContent['nav']);
+navLinks.forEach(e => e.textContent = navContent.shift());
 
 // Header
 
 let headText = document.querySelector('.cta h1');
-headText.textContent = siteContent['cta']['h1'];
+headText.textContent = siteContent.cta.h1;
 
 let headButton = document.querySelector('.cta button');
 headButton.textContent = siteContent['cta']['button'];
@@ -95,6 +94,15 @@ let visionContent = document.querySelector('.bottom-content .text-content:nth-ch
 visionContent.textContent = siteContent['main-content']['vision-content'];
 
 // Contact
+
+let contactSelect = Array.from(document.querySelector('.contact').children);
+let contactValues = Object.values(siteContent['contact']);
+contactSelect.forEach(e => e.textContent = contactValues.shift());
+
+// footer
+
+let footer = document.querySelector('footer p');
+footer.textContent = siteContent['footer']['copyright'];
 
 
 
