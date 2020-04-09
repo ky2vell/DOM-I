@@ -297,3 +297,20 @@ footer {
         margin: 20px;
     }
 }
+
+.animate {
+    animation: rotating 2s linear infinite;
+}
+.animate:hover {
+    animation-play-state: paused;
+    cursor: pointer;
+}
+
+@keyframes rotating {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }

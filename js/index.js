@@ -11,7 +11,8 @@ const siteContent = {
   "cta": {
     "h1": "DOM Is Awesome",
     "button": "Get Started",
-    "img-src": "img/header-img.png"
+    "img-src": "img/header-img.png",
+    "img-swap": "img/letsgetstarted.jpg"
   },
   "main-content": {
     "features-h4": "Features",
@@ -126,6 +127,20 @@ navColor.forEach((e) => {
   e.style.color = 'green';
 });
 
+// Button Event Listener
+
+headButton.addEventListener('click', function () {
+  changeImage();
+});
+
+function changeImage() {
+  headImg.setAttribute('src', siteContent['cta']['img-swap']);
+  headImg.classList.add('animate');
+  headImg.style.boxShadow = '0px 0px 5px #040404'
+}
+
+headImg.style.borderRadius = '50%';
+headImg.style.maxWidth = '379px';
 
 
 
