@@ -297,3 +297,27 @@ footer {
         margin: 20px;
     }
 }
+
+.animate {
+    animation: rotating 2s linear infinite;
+}
+.animate-stop {
+    animation-play-state: paused;
+    cursor: pointer;
+}
+.cta .cta-text .green-button {
+    background: #74bb53;
+    color: white;
+}
+.cta .cta-text .green-button:hover {
+    background: #74bb53;
+}
+
+@keyframes rotating {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
